@@ -270,14 +270,6 @@ const ChatInput = ({ scrollToBottom }) => {
     let quotedMessages = '';
 
     if (quoteMessage.length > 0) {
-      // for (const quote of quoteMessage) {
-      //   const { msg, attachments, _id } = quote;
-      //   if (msg || attachments) {
-      //     const msgLink = await getMessageLink(_id);
-      //     quotedMessages += `[ ](${msgLink})`;
-      //   }
-      // }
-
       const quoteArray = await Promise.all(
         quoteMessage.map(async (quote) => {
           const { msg, attachments, _id } = quote;
